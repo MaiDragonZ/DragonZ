@@ -1,0 +1,340 @@
+@charset "UTF-8";
+#parallax{
+  
+  background-image: url('dinosor/img/BGx1.jpg');
+  
+}
+
+.block-body {
+	margin-top: 30px;
+}
+.recent-work {
+  width: 100%;
+  padding-bottom: 27%;
+  background: #C3C9CC;
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 27%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.recent-work span{
+margin-top: -18px;
+opacity: 0;
+position: relative;
+z-index: 1;
+}
+.recent-work:before {
+  background: rgba(2, 56, 58, 0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  opacity: 0;
+  -o-transition: all .2s;
+-ms-transition: all .2s;
+-moz-transition: all .2s;
+-webkit-transition: all .2s;
+transition: all .2s;
+}
+.recent-work:hover {
+  background-size: 200%;
+  background-position: center;
+}
+.recent-work:hover:before, .recent-work:hover span {
+  opacity: 1;
+}
+
+body {
+
+	background: #f1f0f0;
+}
+
+p {margin: 0 0 20px 0;	}
+
+img {max-width: 100%;}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a{	
+	color: #4da7ca;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+}
+
+a:hover {
+	color: #4290ae;	
+}
+
+.btn{border-radius: 0;}
+.btn-o {
+    border: 1px solid #3A4F52;
+    color: #3A4F52;
+}
+.btn-o:hover {
+    background: #3A4F52;
+    color: white;
+}
+.btn.btn-o-white {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+}
+.btn.btn-o-white:hover {
+    background: white;
+    color: #6a6a6a;
+}
+
+
+.content-block{
+	background:transparent no-repeat center center fixed;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size:100%;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	overflow:hidden;
+	padding: 60px 0;
+}
+/* services */
+#services h1, #services h2{
+	color: white;
+}
+.service i {
+    font-size: 60px;
+}
+.service {
+    padding: 0 25px;
+}
+
+
+
+/* Header */
+.header_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(3px); /* เพิ่มเบลอส่วน Header */
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+/* Blog */
+#blog .blog-post img {
+  margin-bottom: 20px;
+}
+
+#blog .date {
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Footer */
+#footer {
+  background: #2B3E51;
+  color: white;
+  
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.937); /* เพิ่มเอฟเฟกต์เรืองแสง */
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+  z-index: 1000;
+}
+
+/* Keyframes */
+@keyframes flicker {
+  70% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(194, 107, 21, 0.937); /* กลับมาที่ไม่มีเงา */
+  }
+  100% {
+    opacity: 3;
+    text-shadow: 0 0 35px rgba(255, 0, 0, 0.937); /* กลับมาที่ไม่มีเงา */
+  }
+  70% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(237, 112, 10, 0.937); /* กลับมาที่ไม่มีเงา */
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(237, 240, 76, 0.937); /* เพิ่มเอฟเฟกต์เรืองแสง */
+  }
+}
+
+/* Unscramble Text */
+.unscramble-text {
+  animation: flicker 5s infinite; /* 2s คือระยะเวลาที่เอฟเฟกต์จะทำงาน สามารถปรับเปลี่ยนตามความต้องการ */
+  width: 7vw; /* ขนาดความกว้างของข้อความเทียบกับขนาดของหน้าจอ */
+  height: auto; /* ความสูงของข้อความจะปรับตามอัตราส่วนของความกว้าง */
+  color: #000; /* สีข้อความ */
+  position: absolute; /* ตำแหน่งแน่นอน */
+  top: 35vh; /* ตำแหน่งด้านบนของหน้าจอ (35% ของความสูงของหน้าจอ) */
+  right: 50%; /* ตำแหน่งด้านขวาของหน้าจอ (50% ของความกว้างของหน้าจอ) */
+  transform: translate(50%, -50%); /* ย้ายข้อความให้ไปอยู่ตรงกลางแนวตั้งและแนวนอน */
+  font-size: 5vw; /* ขนาดตัวอักษรของข้อความเทียบกับขนาดของหน้าจอ */
+  font-weight: bold; /* ความหนาของตัวอักษร */
+  margin-right: 10px; /* ระยะห่างด้านขวาของข้อความ */
+  text-align: center; /* จัดข้อความกลางแนวนอน */
+  display: flex; /* เพิ่ม Flexbox */
+  justify-content: center; /* จัดเรียงข้อความให้อยู่ตรงกลางแนวนอน */
+  margin-right: 10px; /* ระยะห่างด้านขวาของข้อความ */
+  text-shadow: 0 0 5px rgba(237, 240, 76, 0.937); /* เพิ่มเอฟเฟกต์เรืองแสง */
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* Navbar */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0.1%; /* ตำแหน่งด้านขวาของหน้าจอ (50% ของความกว้างของหน้าจอ) */
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Search Input */
+#search-input {
+  flex: 1vw; /* ความยืดหยุ่นเพื่อให้กล่องค้นหาขยายตามขนาดของกล่องที่มีความกว้างต่างๆ */
+  padding: 0.7vw 5vw; /* ขนาดการเสริมเติมสำหรับตำแหน่งภายในของกล่องค้นหา */
+  border: none;
+  border-radius: 40px;
+  max-width: 100vw;
+  font-size: 1vw;
+  width: 40vw;
+}
+
+/* Search Button */
+#search-button {
+  font-size: 1vw; /* ขนาดของตัวอักษรปุ่มค้นหา */
+  padding: 0.7vw 0.5vw; /* ขนาดของ padding สำหรับปุ่มค้นหา */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 40vw;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Navbar Items */
+.nav-item.active .nav-link {
+  text-shadow: 0 0 10px rgba(215, 237, 94, 0.937); /* เพิ่มเอฟเฟกต์เรืองแสง */
+}
+
+.navbar-nav .nav-link {
+  transition: font-size 0.3s; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงขนาดตัวอักษรเนื่องจากการโฮเวอร์เป็น smooth */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:active {
+  font-size: 30px; /* ปรับขนาดตัวอักษรขยายเมื่อโฮเวอร์หรือ active */
+}
+
+.navbar-nav .nav-link {
+  /* เพิ่มเอฟเฟกต์เรืองแสง */
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/* Navbar Animation */
+ul.navbar-nav {
+  animation: slideIn 0.5s forwards;
+}
+
+ul.navbar-nav.hide {
+  animation: slideOut 0.5s forwards;
+}
+
+/* Hero Background Box */
+.hero_bg_box {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  width: 1920;
+  height: 1080;
+  overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero_bg_box img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Button Center */
+.button_center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Navbar Search Button */
+.nav_search-btn {
+  font-size: 70%;
+  padding: 3% 5%;
+  background-color: #f4f9fd;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  max-width: 30vw; /* เปลี่ยนเป็น vw และปรับค่าตามต้องการ */
+  width: 25vw; /* เปลี่ยนเป็น vw และปรับค่าตามต้องการ */
+}
+
+/* Search Button */
+.search-btn {
+  background-color: #0078d7;
+  color: #ffffff;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  padding: 3% 5%;
+  font-size: 50%;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #005fa2;
+}
