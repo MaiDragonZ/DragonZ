@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.footer{
+  margin-bottom: 0px;
+
+}
 #parallax{
   
   background-image: url('dinosor/img/BGx1.jpg');
@@ -7,6 +11,7 @@
 
 .block-body {
 	margin-top: 30px;
+  background-size: 100%;
 }
 .recent-work {
   width: 100%;
@@ -55,6 +60,7 @@ transition: all .2s;
 body {
 
 	background: #f1f0f0;
+  
 }
 
 p {margin: 0 0 20px 0;	}
@@ -67,7 +73,7 @@ a {
 }
 
 a{	
-	color: #4da7ca;
+	color: #ff0606;
 	-o-transition: all .4s;
 	-ms-transition: all .4s;
 	-moz-transition: all .4s;
@@ -76,7 +82,7 @@ a{
 }
 
 a:hover {
-	color: #4290ae;	
+	color: #003cff;	
 }
 
 .btn{border-radius: 0;}
@@ -274,14 +280,6 @@ a:hover {
   font-weight: bold;
 }
 
-/* Navbar Animation */
-ul.navbar-nav {
-  animation: slideIn 0.5s forwards;
-}
-
-ul.navbar-nav.hide {
-  animation: slideOut 0.5s forwards;
-}
 
 /* Hero Background Box */
 .hero_bg_box {
