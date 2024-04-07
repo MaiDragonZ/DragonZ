@@ -1,12 +1,6 @@
 @charset "UTF-8";
-.footer{
-  margin-bottom: 0px;
-
-}
-#parallax{
-  
+#parallax {
   background-image: url('dinosor/img/BGx1.jpg');
-  
 }
 
 .block-body {
