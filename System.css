@@ -1,6 +1,8 @@
 @charset "UTF-8";
-#parallax {
+
+#parallax{
   background-image: url('dinosor/img/BGx1.jpg');
+  backdrop-filter: blur(5px); /* ปรับค่าตามต้องการ */
 }
 
 .block-body {
@@ -20,6 +22,7 @@
   background-position: center;
   position: relative;
   margin-bottom: 30px;
+
 }
 
 .recent-work span{
@@ -53,7 +56,8 @@ transition: all .2s;
 
 body {
 
-	background: #f1f0f0;
+	background: #180f2c;
+
   
 }
 
@@ -275,8 +279,8 @@ a:hover {
 }
 
 
-/* Hero Background Box */
-.hero_bg_box {
+/*  Box1 */
+.box1 {
   position: relative;
   top: 0%;
   left: 0%;
@@ -286,7 +290,7 @@ a:hover {
 }
 
 /* Hero Background Image */
-.hero_bg_box img {
+.box1 img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
