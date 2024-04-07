@@ -1,8 +1,14 @@
 @charset "UTF-8";
-
-#parallax{
+#aboutweb::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /* ความยาวของเส้นแบ่ง */
+  background-color: #000; /* สีของเส้นแบ่ง */
+  margin-bottom: 20px; /* ระยะห่างของเส้นแบ่งกับส่วน "About" */
+}
+.hero_bg_box2{
   background-image: url('dinosor/img/BGx1.jpg');
-  backdrop-filter: blur(5px); /* ปรับค่าตามต้องการ */
 }
 
 .block-body {
@@ -22,7 +28,6 @@
   background-position: center;
   position: relative;
   margin-bottom: 30px;
-
 }
 
 .recent-work span{
@@ -56,8 +61,7 @@ transition: all .2s;
 
 body {
 
-	background: #180f2c;
-
+	background: #f3f2f2de;
   
 }
 
@@ -153,8 +157,10 @@ a:hover {
 
 /* Footer */
 #footer {
-  background: #2B3E51;
+  background: #20364c;
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
   
 }
 
@@ -279,8 +285,8 @@ a:hover {
 }
 
 
-/*  Box1 */
-.box1 {
+/* Hero Background Box */
+.hero_bg_box {
   position: relative;
   top: 0%;
   left: 0%;
@@ -290,7 +296,7 @@ a:hover {
 }
 
 /* Hero Background Image */
-.box1 img {
+.hero_bg_box img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
