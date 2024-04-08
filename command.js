@@ -50,12 +50,7 @@ jQuery('nav > ul > li > a').click(function(e){
 jQuery(window).scroll( function() {
    setHeaderBackground();
 });
-// เพิ่มฟังก์ชันค้นหา
-document.getElementById("search-button").addEventListener("click", function() {
-  var searchTerm = document.getElementById("search-input").value; // รับค่าที่ป้อนเข้ามาในช่องค้นหา
-  // ดำเนินการค้นหาโดยใช้ค่า searchTerm
-  // แสดงผลข้อมูลที่ค้นหาในที่ที่คุณต้องการ
-});
+
 
 document.getElementById("search-button").addEventListener("click", function() {
   var searchTerm = document.getElementById("search-input").value.toLowerCase(); // รับค่าที่ป้อนเข้ามาในช่องค้นหาและแปลงเป็นตัวพิมพ์เล็กทั้งหมด
@@ -82,4 +77,3 @@ document.getElementById("search-button").addEventListener("click", function() {
     resultsContainer.innerHTML += "<p>No results found.</p>"; // แสดงข้อความว่าไม่พบผลลัพธ์การค้นหา
   }
 });
-
