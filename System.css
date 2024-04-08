@@ -1,6 +1,15 @@
 @charset "UTF-8";
+.bi-arrow-down-circle{
+  
+    font-size: 2rem; /* ปรับขนาดไอคอนให้ใหญ่ขึ้น เช่น 2rem */
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
 #parallax{
-  background: black;
+  background-image: url('dinosor/img/BGx1.jpg');
 }
 .hero_bg_box:after {
   content: "";
@@ -8,16 +17,9 @@
   width: 100%;
   height: 2px; /* ความยาวของเส้นแบ่ง */
   background-color: #000; /* สีของเส้นแบ่ง */
-  margin-bottom: 20px; /* ระยะห่างของเส้นแบ่งกับส่วน "About" */
+  margin-bottom: 15px; /* ระยะห่างของเส้นแบ่งกับส่วน "About" */
 }
-#parallax::before{
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px; /* ความยาวของเส้นแบ่ง */
-  background-color: #000; /* สีของเส้นแบ่ง */
-  margin-bottom: 20px; /* ระยะห่างของเส้นแบ่งกับส่วน "About" */
-}
+
 #aboutweb::before {
   content: "";
   display: block;
@@ -25,9 +27,6 @@
   height: 2px; /* ความยาวของเส้นแบ่ง */
   background-color: #000; /* สีของเส้นแบ่ง */
   margin-bottom: 20px; /* ระยะห่างของเส้นแบ่งกับส่วน "About" */
-}
-.hero_bg_box2{
-  background-image: url('dinosor/img/BGx1.jpg');
 }
 
 .block-body {
