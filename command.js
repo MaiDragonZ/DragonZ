@@ -52,9 +52,10 @@ jQuery(window).scroll( function() {
 });
 
 
-document.getElementById("search-button").addEventListener("click", function() {
-  var searchTerm = document.getElementById("search-input").value.toLowerCase(); // รับค่าที่ป้อนเข้ามาในช่องค้นหาและแปลงเป็นตัวพิมพ์เล็กทั้งหมด
-  var contentList = document.getElementById("searchable-content").getElementsByTagName("li"); // ดึงรายการข้อมูลที่ต้องการค้นหา
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // ไม่ให้เว็บเริ่มการค้นหาใหม่
+  var searchTerm = document.getElementById('searchInput').value.toLowerCase(); // รับค่าที่ป้อนเข้ามาในช่องค้นหาและแปลงเป็นตัวพิมพ์เล็กทั้งหมด
+  var contentList = document.getElementById('searchable-content').getElementsByTagName('li'); // ดึงรายการข้อมูลที่ต้องการค้นหา
 
   var searchResults = []; // เก็บผลลัพธ์การค้นหาที่ตรงกับเงื่อนไข
   for (var i = 0; i < contentList.length; i++) {
@@ -65,14 +66,14 @@ document.getElementById("search-button").addEventListener("click", function() {
   }
 
   // แสดงผลลัพธ์การค้นหา
-  var resultsContainer = document.getElementById("search-results");
+  var resultsContainer = document.getElementById('searchResults');
   resultsContainer.innerHTML = "<h3>Search Results</h3>"; // เพิ่มส่วนหัวของผลลัพธ์การค้นหา
   if (searchResults.length > 0) { // ตรวจสอบว่ามีผลลัพธ์การค้นหาหรือไม่
     resultsContainer.innerHTML += "<ul>"; // เริ่มต้นรายการผลลัพธ์การค้นหา
     for (var j = 0; j < searchResults.length; j++) {
-      resultsContainer.innerHTML += "<li>" + searchResults[j] + "</li>"; // เพิ่มข้อมูลผลลัพธ์การค้นหา
+      resultsContainer.innerHTML += "<li>" + searchResults[j] + "</li>"; // เพิ่มข้อมูลที่ตรงกับเงื่อนไขลงในรายการผลลัพธ์การค้นหา
     }
-    resultsContainer.innerHTML += "</ul>"; // ปิดรายการผลลัพธ์การค้นหา
+    resultsContainer.innerHTML += "</ul>"; // สิ้นสุดรายการผลลัพธ์การค้นหา
   } else {
     resultsContainer.innerHTML += "<p>No results found.</p>"; // แสดงข้อความว่าไม่พบผลลัพธ์การค้นหา
   }

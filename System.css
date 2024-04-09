@@ -126,18 +126,11 @@ a:hover {
 }
 
 
-.content-block{
-	background:transparent no-repeat center center fixed;
-	-webkit-background-size:100%;
-	-moz-background-size:100%;
-	-o-background-size:100%;
-	background-size:100%;
-	background-size:cover;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	overflow:hidden;
-	padding: 60px 0;
+.content-block {
+  background: transparent no-repeat center center fixed;
+  background-size: cover; /* เปลี่ยนคำสั่ง background-size เป็น cover */
+  overflow: hidden;
+  padding: 60px 0;
 }
 /* services */
 #services h1, #services h2{
@@ -252,13 +245,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
  }
 
 
-form{
+#searchForm{
   position: relative;
   top: 50%;
   left: 50%;
@@ -272,24 +266,37 @@ form{
   border: 4px solid white;
   padding: 5px;
 }
-
+#searchInput{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+}
 input{
+  width: calc(100% - 50px);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;;
   height: 42.5px;
   line-height: 30px;
   outline: 0;
-  border: 0;
+  border: none;
   display: none;
   font-size: 1em;
   border-radius: 20px;
   padding: 0 20px;
 }
-
+#searchButton{
+  border: none;
+  outline: none;
+}
 .fa{
   box-sizing: border-box;
+  border: none;
+  outline: none;
   padding: 10px;
   width: 42.5px;
   height: 42.5px;
@@ -304,7 +311,7 @@ input{
   
 }
 
-form:hover{
+#searchForm:hover{
   cursor: pointer;
   background-color: #f4f9fd;
   border: none;
@@ -312,11 +319,11 @@ form:hover{
 
 }
 
-form:hover input{
+#searchForm:hover input{
   display: block;
 }
 
-form:hover .fa{
+#searchForm:hover .fa{
   background: #050506;
   color: white;
   align-items: center;
@@ -377,29 +384,8 @@ form:hover .fa{
   transform: translate(-50%, -50%);
 }
 
-/* Navbar Search Button */
-.nav_search-btn {
-  font-size: 70%;
-  padding: 3% 5%;
-  background-color: #f4f9fd;
-  color: #000000;
-  border: none;
-  border-radius: 5px;
-  max-width: 30vw; /* เปลี่ยนเป็น vw และปรับค่าตามต้องการ */
-  width: 25vw; /* เปลี่ยนเป็น vw และปรับค่าตามต้องการ */
-}
 
-/* Search Button */
-.search-btn {
-  background-color: #0078d7;
-  color: #ffffff;
-  border-radius: 0 5px 5px 0;
-  border: none;
-  padding: 3% 5%;
-  font-size: 50%;
-  cursor: pointer;
-}
 
-.search-btn:hover {
-  background-color: #005fa2;
-}
+
+
+
