@@ -66,7 +66,7 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
   }
 
   // แสดงผลลัพธ์การค้นหา
-  var resultsContainer = document.getElementById('searchResults');
+  var resultsContainer = document.getElementById('searchResults'); 
   resultsContainer.innerHTML = "<h3>Search Results</h3>"; // เพิ่มส่วนหัวของผลลัพธ์การค้นหา
   if (searchResults.length > 0) { // ตรวจสอบว่ามีผลลัพธ์การค้นหาหรือไม่
     resultsContainer.innerHTML += "<ul>"; // เริ่มต้นรายการผลลัพธ์การค้นหา
