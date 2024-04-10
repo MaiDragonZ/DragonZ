@@ -44,7 +44,7 @@ function search() {
     var name = namesPlants[i];
     if (name === searchText) {
       window.location.replace(
-        "https://maidragonz.github.io/maprang/" + searchText + ".html"
+        "https://maidragonz.github.io/maprang/" + searchText 
      
       );
       return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
@@ -54,7 +54,7 @@ function search() {
     var name = namesmeats[i];
     if (name === searchText) {
       window.location.replace(
-        "https://maidragonz.github.io/vieew/" + searchText + ".html"
+        "https://maidragonz.github.io/vieew/" + searchText 
      
       );
       return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
