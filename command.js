@@ -15,7 +15,7 @@ function search() {
   for (var i = 0; i < names.length; i++) {
       var name = names[i];
       if (name === searchText) {
-          window.href = 'https://maidragonz.github.io/Pee/ml';
+          window.open = "https://www.youtube.com/";
           return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
       }
   }
