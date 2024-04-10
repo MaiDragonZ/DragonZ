@@ -17,6 +17,7 @@ function search() {
       var name = namesPlants[i];
       if (name === searchText) {
         window.location.href =('https://maidragonz.github.io/maprang/' + searchText +'.html');
+        document.getElementById('search-input').autocomplete = 'off';
           return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
       }
     } 
@@ -25,6 +26,7 @@ function search() {
       if (name === searchText) {
         
         window.location.href = ('https://maidragonz.github.io/vieew/' + searchText +'.html');
+        document.getElementById('search-input').autocomplete = 'off';
           return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
       }
     }
