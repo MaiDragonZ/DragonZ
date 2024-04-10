@@ -16,7 +16,7 @@ function search() {
   for (var i = 0; i < namesPlants.length; i++) {
       var name = namesPlants[i];
       if (name === searchText) {
-        window.location.href =('https://maidragonz.github.io/maprang/' + searchText +'.html');
+        window.open('https://maidragonz.github.io/maprang/' + searchText +'.html', '_self');
           return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
       }
     } 
@@ -24,7 +24,7 @@ function search() {
     var name = namesmeats[i];
       if (name === searchText) {
         
-        window.location.href = ('https://maidragonz.github.io/vieew/' + searchText +'.html');
+        window.open('https://maidragonz.github.io/vieew/' + searchText +'.html', '_self');
           return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
       }
     }
