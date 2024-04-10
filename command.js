@@ -52,29 +52,31 @@ jQuery(window).scroll( function() {
 });
 
 
-document.getElementById('searchForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // ไม่ให้เว็บเริ่มการค้นหาใหม่
-  var searchTerm = document.getElementById('searchInput').value.toLowerCase(); // รับค่าที่ป้อนเข้ามาในช่องค้นหาและแปลงเป็นตัวพิมพ์เล็กทั้งหมด
-  var contentList = document.getElementById('searchable-content').getElementsByTagName('li'); // ดึงรายการข้อมูลที่ต้องการค้นหา
-
-  var searchResults = []; // เก็บผลลัพธ์การค้นหาที่ตรงกับเงื่อนไข
-  for (var i = 0; i < contentList.length; i++) {
-    var content = contentList[i].textContent.toLowerCase(); // แปลงข้อความในรายการเป็นตัวพิมพ์เล็กทั้งหมด
-    if (content.includes(searchTerm)) { // ตรวจสอบว่าข้อความในรายการมีคำค้นหาหรือไม่
-      searchResults.push(contentList[i].innerHTML); // เพิ่มข้อมูลที่ตรงกับเงื่อนไขไปยังผลลัพธ์การค้นหา
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        search();
     }
-  }
-
-  // แสดงผลลัพธ์การค้นหา
-  var resultsContainer = document.getElementById('searchResults'); 
-  resultsContainer.innerHTML = "<h3>Search Results</h3>"; // เพิ่มส่วนหัวของผลลัพธ์การค้นหา
-  if (searchResults.length > 0) { // ตรวจสอบว่ามีผลลัพธ์การค้นหาหรือไม่
-    resultsContainer.innerHTML += "<ul>"; // เริ่มต้นรายการผลลัพธ์การค้นหา
-    for (var j = 0; j < searchResults.length; j++) {
-      resultsContainer.innerHTML += "<li>" + searchResults[j] + "</li>"; // เพิ่มข้อมูลที่ตรงกับเงื่อนไขลงในรายการผลลัพธ์การค้นหา
-    }
-    resultsContainer.innerHTML += "</ul>"; // สิ้นสุดรายการผลลัพธ์การค้นหา
-  } else {
-    resultsContainer.innerHTML += "<p>No results found.</p>"; // แสดงข้อความว่าไม่พบผลลัพธ์การค้นหา
-  }
+}
+document.getElementById('searchButton').addEventListener('click', function() {
+    search();
 });
+
+
+function search() {
+    var searchText = document.getElementById('searchInput').value;
+    var names =  ['Compsognathus', 'Carcharodontosaurus', 'Carnotaurus', 'Giganotosaurus', 'Coelophysis', 'Ceratosaurus', 'Deinonychus', 
+         'Dilophosaurus', 'Tarbosaurus', 'Troodon', 'Tyrannosaurus', 'Baryonyx', 'Velociraptor', 'Spinosaurus', 'Allosaurus', 'Herrerasaurus', 
+         'Maiasaura', 'Saichania', 'Diplodocus', 'Saltasaurus', 'Triceratops', 'Gallimimus', 'Iguanodon', 'Diplodocus', 'Stegosaurus', 
+         'Apatosaurus'];
+    for (var i = 0; i < names.length; i++) {
+        var name = names[i];
+        var element = document.getElementById(name);
+        if (element) {
+            if (name === searchText) {
+                // เพิ่มลิงก์ไปยังหน้าเว็บอื่น เปลี่ยนตรงhttp....html ก็จะได้เลย แต่ต้องมั่นใจว่าทุกหน้าขึ้นต้นเหมือนกันนะ มันะเปลี่ยนแค่ตรง searchText แสดงว่าเราจะต้องเปลี่ยนชื่อไฟล์ทุกไฟล์ให้เป็นชื่อไดโนเสาร์
+                window.open('https://maidragonz.github.io/Pee/' + searchText + '.html');
+                break;
+            }
+        }
+    }
+}
