@@ -132,18 +132,6 @@ a:hover {
   overflow: hidden;
   padding: 60px 0;
 }
-/* services */
-#services h1, #services h2{
-	color: white;
-}
-.service i {
-    font-size: 60px;
-}
-.service {
-    padding: 0 25px;
-}
-
-
 
 /* Header */
 .header_section {
@@ -334,9 +322,6 @@ input{
  
   
 }
-
-
-
 
 /* Navbar Items */
 .nav-item.active .nav-link {
