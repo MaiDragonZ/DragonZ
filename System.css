@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.content-block h1 {
+ 
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.937); /* เพิ่มเอฟเฟกต์เรืองแสง */
+}
+.content-block p {
+ 
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.937); /* เพิ่มเอฟเฟกต์เรืองแสง */
+}
 .bi-arrow-down-circle{
   
   font-size: 2rem; /* ปรับขนาดไอคอนให้ใหญ่ขึ้น เช่น 2rem */
