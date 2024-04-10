@@ -45,8 +45,7 @@ function search() {
     if (name === searchText) {
       window.location.replace(
         "https://maidragonz.github.io/maprang/" + searchText 
-     
-      );
+      );   window.close();
       return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
     }
   }
@@ -55,8 +54,7 @@ function search() {
     if (name === searchText) {
       window.location.replace(
         "https://maidragonz.github.io/vieew/" + searchText 
-     
-      );
+      );   window.close();
       return; // ออกจากฟังก์ชันทันทีหลังจากที่ได้ทำการเปลี่ยน URL แล้ว
     }
   }
